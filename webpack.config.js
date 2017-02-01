@@ -10,7 +10,7 @@ var config = {
         filename: "bundle.js",
         publicPath: "/app/"
     },
-    devtool: "cheap-module-eval-source-map",
+    //devtool: "cheap-module-eval-source-map",
     module: {
         loaders: [
             {
@@ -23,7 +23,7 @@ var config = {
             },
             {
                 test: /\.scss$/,
-                loaders: ["style-loader", "css-loader?sourceMap", "sass-loader?sourceMap"]
+                loaders: ["style-loader", "css-loader", "sass-loader"]
             }
         ]
     },
