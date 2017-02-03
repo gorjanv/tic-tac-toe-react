@@ -24,8 +24,14 @@ var config = {
         loaders: [
             {
                 test: /\.js?/,
+                loader: "eslint-loader",
+                exclude: [nodeModulesPath]
+            },
+            {
+                test: /\.js?/,
                 include: SRC_DIR,
                 loader: "babel-loader",
+                exclude: [nodeModulesPath],
                 query: {
                     presets: ["react", "es2015", "stage-2"]
                 }

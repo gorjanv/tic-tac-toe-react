@@ -1,7 +1,41 @@
-modal-container
+@import "vars"
 
-modal-body
+.overlay
+  height: $container-width
+  width: $container-width
+  background-color: #777
+  position: relative
+  z-index: -1
+  top: -$container-width - 3*$board-border-px
+  left: -$board-border-px
+  margin: auto
+  opacity: 0.5
+  border: $overlay-border
+  border-radius: $board-border-radius
 
-modal-header
+.modal-container
+  position: relative
+  top: 30%
+  //width: 80%
+  //height: 50%
+  z-index: 2
+  background-color: burlywood
+  border: $overlay-border
+  border-radius: $board-border-radius
 
-modal-footer
+.modal-body
+  width: 80%
+  height: 80%
+
+  background-color: $color-2
+
+.modal-header
+  height: $container-width / 5
+  background-color: burlywood
+  text-align: center
+  font-family: $font-family
+  color: $color-1
+
+.modal-footer
+  height: $container-width / 5
+  background-color: burlywood

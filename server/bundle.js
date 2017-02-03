@@ -11,7 +11,6 @@ module.exports = function () {
     // created
     var bundleStart = null;
     var compiler = Webpack(webpackConfig);
-    console.log(webpackConfig)
     
     // We give notice in the terminal when it starts bundling and
     // set the time it started

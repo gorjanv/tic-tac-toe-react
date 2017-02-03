@@ -87,7 +87,7 @@ export default class TicTacToe extends Component {
                 currentlySelected.push(tile.coord - 1);
         });
         
-        winningSubsets.forEach((subset, index) => {
+        winningSubsets.forEach((subset) => {
             if (currentlySelected.includes(subset[0]) &&
               currentlySelected.includes(subset[1]) &&
               currentlySelected.includes(subset[2])) {
@@ -126,11 +126,11 @@ export default class TicTacToe extends Component {
             return <Tile key={key} onTileClick={this.clickEvent} tile={tile} />
         }.bind(this));
         
-        let boardState = <div className="board">{tiles}</div>;
+        let boardState = <div className="game-board-container">{tiles}</div>;
         
         return (
           this.state.gameState === "won" || this.state.gameState === "draw" ?
-            <div>
+            <div className="game-container">
                 {boardState}
                 <Modal endGameButton={this.endGame} gameState={this.state.gameState} player={this.state.player} />
             </div> :
