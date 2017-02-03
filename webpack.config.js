@@ -1,16 +1,25 @@
-var path = require("path");
+var Webpack = require('webpack');
+var path = require('path');
+var nodeModulesPath = path.resolve(__dirname, 'node_modules');
+var buildPath = path.resolve(__dirname, 'public', 'build');
+var mainPath = path.resolve(__dirname, 'app', 'index.js');
+
 
 var DIST_DIR = path.resolve(__dirname, "dist");
-var SRC_DIR = path.resolve(__dirname, "src");
+var SRC_DIR = path.resolve(__dirname, "app");
 
 var config = {
-    entry: SRC_DIR + "/app/index.js",
+    entry: [
+        'webpack/hot/dev-server',
+        'webpack-dev-server/client?http://localhost:8080',
+        mainPath
+    ],
     output: {
-        path: DIST_DIR + "/app",
+        path: buildPath,
         filename: "bundle.js",
-        publicPath: "/app/"
+        publicPath: "/build/"
     },
-    //devtool: "cheap-module-eval-source-map",
+    devtool: "cheap-module-eval-source-map",
     module: {
         loaders: [
             {
@@ -22,11 +31,12 @@ var config = {
                 }
             },
             {
-                test: /\.scss$/,
+                test: /\.sass$/,
                 loaders: ["style-loader", "css-loader", "sass-loader"]
             }
         ]
     },
+    plugins: [new Webpack.HotModuleReplacementPlugin()]
 };
 
 module.exports = config;

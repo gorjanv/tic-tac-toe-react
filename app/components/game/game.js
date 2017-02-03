@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Tile from "./tile";
 import Modal from "../modal/modal";
 
-import { winningSubsets } from "../../../util";
+import { winningSubsets } from "../../util";
 
 export default class TicTacToe extends Component {
     constructor(props, context) {

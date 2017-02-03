@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build -inline -hot",
+    "start": "node server",
     "build": "webpack -d && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --inline --hot",
     "build:prod": "webpack -p && cp src/index.html dist/index.html"
   },
@@ -17,7 +17,6 @@
     "babel-preset-stage-2": "^6.22.0",
     "css-loader": "^0.26.1",
     "react": "^15.4.2",
-    "react-addons": "^0.9.1-deprecated",
     "react-addons-css-transition-group": "^15.4.2",
     "react-dom": "^15.4.2",
     "sass": "^0.5.0",
