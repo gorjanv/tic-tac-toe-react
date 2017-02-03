@@ -132,12 +132,7 @@ export default class TicTacToe extends Component {
           this.state.gameState === "won" || this.state.gameState === "draw" ?
             <div>
                 {boardState}
-                <Modal transitionName="slide" transitionEnterTimeout={10000} transitionLeaveTimeout={10000}>
-                    {this.state.gameState === "draw" ?
-                      <div key={0} style={{backgroundColor: "red", height:"300px", width:"300px", transition: "width 2s, height 4s"}}>Game drawn ..</div> :
-                        <div key={0} style={{backgroundColor: "red", height:"300px", width:"300px", transition: "width 2s, height 4s"}}>{"Player " + this.state.player + " has won"}</div>}
-                        <input key={1} className="dialog-button" type="button" onClick={this.endGame} value="YES"/>
-                </Modal>
+                <Modal endGameButton={this.endGame} gameState={this.state.gameState} player={this.state.player} />
             </div> :
             <div>{boardState}</div>
         );

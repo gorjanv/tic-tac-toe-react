@@ -16,7 +16,6 @@ module.exports = function () {
     // We give notice in the terminal when it starts bundling and
     // set the time it started
     compiler.plugin('compile', function() {
-        console.log('Bundling...');
         bundleStart = Date.now();
     });
     

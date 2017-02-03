@@ -1,0 +1,29 @@
+@import "vars"
+
+.tile
+  width: $tile-size
+  height: $tile-size
+  cursor: default
+  text-align: center
+  display: inline-block
+  font-size: $tile-font-size
+  line-height: $line-height
+  font-family: $font-family
+  border: $tile-border
+  border-color: $color-1
+  border-radius: $tile-border-radius
+  background-color: $color-2
+  &:hover
+    background-color: $color-3
+
+.X
+  @extend .tile
+  color:  $color-1
+
+.O
+  @extend .tile
+  color: $color-4
+
+.not-played
+  @extend .tile
+  color: $color-2
