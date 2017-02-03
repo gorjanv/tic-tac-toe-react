@@ -1,41 +1,66 @@
 @import "vars"
 
-.overlay
-  height: $container-width
-  width: $container-width
-  background-color: #777
-  position: relative
-  z-index: -1
-  top: -$container-width - 3*$board-border-px
-  left: -$board-border-px
-  margin: auto
-  opacity: 0.5
-  border: $overlay-border
-  border-radius: $board-border-radius
+//.overlay
+//  height: $container-width
+//  width: $container-width
+//  background-color: #777
+//  position: relative
+//  z-index: -1
+//  top: -$container-width - 3*$board-border-px
+//  left: -$board-border-px
+//  margin: auto
+//  opacity: 0.5
+//  border: $overlay-border
+//  border-radius: $board-border-radius
 
-.modal-container
-  position: relative
-  top: 30%
-  //width: 80%
-  //height: 50%
-  z-index: 2
-  background-color: burlywood
-  border: $overlay-border
+.modal
+  position: absolute
+  top: 0
+  width: $container-width
+  border: $modal-border
   border-radius: $board-border-radius
+  height: $container-width
+  z-index: 1
+  background-color: rgba(0, 0, 0, 0.2)
+
+.modal-content
+  font-family: $font-family
+  position: relative
+  margin: auto
+  width: 80%
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.4)
+  -webkit-animation-name: animatetop
+  -webkit-animation-duration: 0.4s
+  animation-name: animatetop
+  animation-duration: 0.4s
+  background-color: #ccc
+  top: 20%
+  border: $board-border
+  border-radius: $board-border-radius
+  overflow: hidden
+  cursor: default
 
 .modal-body
-  width: 80%
-  height: 80%
-
-  background-color: $color-2
+  padding: 10px
+  text-align: center
+  color: #fff
+  font-size: 0.7rem
 
 .modal-header
-  height: $container-width / 5
-  background-color: burlywood
+  padding: 5px
   text-align: center
-  font-family: $font-family
+  background-color: $color-2
+  font-size: 0.8rem
   color: $color-1
 
 .modal-footer
-  height: $container-width / 5
-  background-color: burlywood
+  padding: 5px
+  text-align: center
+  background-color: $color-2
+  &hover
+    background-color: #7d4627
+
+.modal-button
+
+
+
