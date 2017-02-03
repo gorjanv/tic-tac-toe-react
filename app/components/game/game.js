@@ -97,8 +97,6 @@ export default class TicTacToe extends Component {
         });
         
         if (turn === 9 && gameWon === false) {
-            // the game is drawn
-            // call endGame with DRAW
             this.setState({
                 tiles: stateCopy,
                 turn: turn,
@@ -134,7 +132,7 @@ export default class TicTacToe extends Component {
                 {boardState}
                 <Modal endGameButton={this.endGame} gameState={this.state.gameState} player={this.state.player} />
             </div> :
-            <div>{boardState}</div>
+            <div className="game-container">{boardState}</div>
         );
     }
 }

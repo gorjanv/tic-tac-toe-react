@@ -1,5 +1,6 @@
 {
-  "name": "webpack-config-tutorial",
+  "name": "tic-tac-toe-reactjs",
+  "author": "Gorjan Velkovski",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

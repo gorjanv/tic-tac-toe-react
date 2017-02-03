@@ -13,7 +13,7 @@ export default class Modal extends Component {
                     <div key={1} className="modal-body">{"Would you like a new game?"}</div>
           
                     <div key={2} className="modal-footer">
-                      <input key={3} className="modal-button" type="button" onClick={this.props.endGameButton} value="YES"/>
+                      <input key={3} className="modal-button" type="button" onClick={this.props.endGameButton} value="Yes"/>
                     </div>
                 </div>
           </div>
